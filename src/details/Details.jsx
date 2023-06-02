@@ -1,7 +1,13 @@
 import React from 'react'
+import PizzaCounter from '../components/pizzaCounter/PizzaCounter'
 
-export const Details = () => {
+
+const Details = () => {
   return (
-    <div>Details</div>
+    <div>
+      <PizzaCounter/>
+    </div>
   )
 }
+
+export default Details
