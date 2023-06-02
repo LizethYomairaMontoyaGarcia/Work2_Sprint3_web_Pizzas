@@ -1,2 +1,2 @@
 import {createContext} from 'react';
-export const PizzaContex = createContext();
+export const PizzaContext = createContext();

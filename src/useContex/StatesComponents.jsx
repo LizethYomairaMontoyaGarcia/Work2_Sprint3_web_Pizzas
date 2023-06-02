@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PizzaContext } from "./CounterContext";
+import {PizzaContext} from "./PizzaContext";
 
 const StatesComponents = ({ children }) => {
   const [seleccion, setSeleccion] = useState("Viaje redondo");

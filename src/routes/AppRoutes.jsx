@@ -1,5 +1,5 @@
 import React from "react";
-import App from "../App/App";
+// import App from "../App/App";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import StartSession from "../pages/StartSession";
 import HomeInfo from "../pages/HomeInfo";
@@ -16,8 +16,8 @@ const AppRoutes = () => {
       <BrowserRouter>
         <StatesComponents>
           <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="startSeccion" element={<StartSession />} />
+            {/* <Route path="/" element={<App />} /> */}
+            <Route path="/" element={<StartSession />} />
             <Route path="homeInfo" element={<HomeInfo />} />
             <Route path="products" element={<Products />} />
             <Route path="infoProducts" element={<InfoProducts />} />
