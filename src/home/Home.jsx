@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './home.scss'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+   <>
+  <h1>Hola mundo</h1>
+   </>
   )
 }
