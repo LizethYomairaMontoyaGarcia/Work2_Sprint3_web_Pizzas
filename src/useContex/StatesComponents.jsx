@@ -2,18 +2,10 @@ import React, { useState } from "react";
 import {PizzaContext} from "./PizzaContext";
 
 const StatesComponents = ({ children }) => {
-  const [seleccion, setSeleccion] = useState("Viaje redondo");
+  //const [seleccion, setSeleccion] = useState("");
 
-  return (
-    <PizzaContext.Provider
-      value={{
-        seleccion,
-        setSeleccion,
-      }}
-    >
-      {children}
-    </PizzaContext.Provider>
-  );
+  return <PizzaContext.Provider value={{}}>
+    {children}</PizzaContext.Provider>;
 };
 
 export default StatesComponents;
