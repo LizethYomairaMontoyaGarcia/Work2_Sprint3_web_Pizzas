@@ -1,0 +1,46 @@
+@import "../../style/style.scss";
+
+.button-price{
+    @include buttonOval($colorFucsia, $colorFucsia, $hoverWhite, $colorPink);
+}
+
+.button-reviews{
+    @include buttonOval($colorOrange, $colorOrange, $hoverWhite, $colorPink);
+
+    img{
+        color: aliceblue;
+        border: white;
+      
+    }
+}
+.button-shopping{
+    @include buttonSquare(
+        $widthS, 
+        $colorFucsia, 
+        $borderWhite,
+        $colorWhite, 
+        $hoverWhite, 
+        $colorFucsia)  
+
+}
+
+.button-pay{
+    @include buttonSquare(
+        $widthM, 
+        $colorFucsia, 
+        $borderWhite,
+        $colorWhite, 
+        $hoverWhite, 
+        $colorFucsia)  
+
+}
+
+.button__pay-now{
+    @include buttonSquare(
+        $widthXl, 
+        $colorFucsia, 
+        $borderWhite,
+        $colorWhite, 
+        $hoverWhite, 
+        $colorFucsia)
+}

@@ -23,7 +23,7 @@ const AppRoutes = () => {
             <Route path="infoProducts" element={<InfoProducts />} />
             <Route path="trolley" element={<Trolley />} />
             <Route path="buys" element={<Buys />} />
-            <Route path="infoProducts" element={<InfoProducts />} />
+            {/* <Route path="infoProducts" element={<InfoProducts />} /> */}
             <Route path="/" component={<Navigate to="/StartSeccion" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

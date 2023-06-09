@@ -27,33 +27,17 @@ const PizzaCounter = () => {
 
     return (
         <>
-           <section className='counter'>
-           <div className='counter__container'>
+           <div className='counter'>
                 <button className='counter__buttons' onClick={() => dispach({ type: types.decrement })}>
                     -
                 </button>
-                <button className='counter__buttons'>
+                <button className='counter__date'>
                     {counter}
                 </button>
-                <button className='counter__buttons' onClick={() => dispach({ type: types.increment })}>
+                < button className='counter__buttons' onClick={() => dispach({ type: types.increment })}>
                     +
                 </button>
             </div >
-            <div>
-                <button className='counter__buy'>
-                    <figure>
-                        <img src="#" alt="btn-buy" />
-                    </figure>
-                </button>
-            </div>
-            <div>
-                <button className='counter__btnPay'>
-                    Pagar
-                </button>
-            </div>
-            
-           </section>
-
         </>
     )
 }
