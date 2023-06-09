@@ -1,8 +1,11 @@
 import React from 'react'
+import ShoppingTrolley from '../shoppingCart/ShoppingTrolley'
 
 const Buys = () => {
   return (
-    <div>Buys</div>
+    <>
+    <ShoppingTrolley/>
+    </>
   )
 }
 
