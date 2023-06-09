@@ -7,7 +7,7 @@ import { users } from "../services/users";
 import { searchParamsContext } from "../routes/AppRoutes";
 import * as Yup from "yup";
 import "./login.scss";
-import User from "../images/usuario.jpg";
+//import User from "../images/usuario.jpg";
 
 const Login = () => {
   const navigate = useNavigate();
