@@ -6,6 +6,8 @@ import PizzaLogin from "../images/iconoPizaLogin.png";
 import { users } from "../services/users";
 import { searchParamsContext } from "../routes/AppRoutes";
 import * as Yup from "yup";
+import "./login.scss";
+import User from "../images/usuario.jpg";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -39,40 +41,66 @@ const Login = () => {
   });
 
   return (
-    <div className="login">
-      <div className="login__logo">
-        <img src={PizzaLogin} alt="pizza" />
-        <h1>PiSassScript</h1>
-      </div>
-      <h1 className="login__title">Inicia sesión en tu cuenta</h1>
-      <p>Disfruta de la mejor Pizza creada para las personas amantes del código.</p>
+    <div className="login__img-background">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form>
-          <div className="login__form">
-            <label htmlFor="userName">Nombre de usuario</label>
-            <Field type="text" id="userName" name="userName" />
+        <Form className="loginForm">
+          <div className="loginForm__logoPiSaaa">
+            <img src={PizzaLogin} alt="pizza" />
+            <h1>PiSassScript</h1>
+          </div>
+          <h1 className="loginForm__title">Inicia sesión en tu cuenta</h1>
+          <p className="loginForm__text">
+            Disfruta de la mejor Pizza creada para las personas amantes del
+            código.
+          </p>
+
+          <div className="loginForm__form">
+            <label htmlFor="userName" className="loginForm__label">
+              Nombre de usuario
+            </label>
+            {/* <img src={User} alt="" /> */}
+            <Field
+              type="text"
+              id="userName"
+              name="userName"
+              className="loginForm__input"
+            />
             <ErrorMessage
               name="userName"
               component="div"
-              className="login__error-message"
+              className="loginForm__x"
             />
           </div>
 
-          <div className="login__form">
-            <label htmlFor="password">Contraseña</label>
-            <Field type="password" id="password" name="password" />
+          <div className="loginForm__form">
+            <label htmlFor="password" className="loginForm__label">
+              Contraseña
+            </label>
+            <Field
+              type="password"
+              id="password"
+              name="password"
+              className="loginForm__input"
+            />
             <ErrorMessage
               name="password"
               component="div"
-              className="login__error-message"
+              className="loginForm__x"
             />
           </div>
 
-          <button type="submit">Iniciar sesión</button>
+          <button type="submit" className="loginForm__submit">
+            Iniciar sesión
+          </button>
+          <div className="loginForm__info">
+            <h3>Restablecer contraseña</h3>
+            <p>¿No tienes Cuenta?</p>
+            <h3>Registrate aquí</h3>
+          </div>
         </Form>
       </Formik>
     </div>
@@ -80,9 +108,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
-
