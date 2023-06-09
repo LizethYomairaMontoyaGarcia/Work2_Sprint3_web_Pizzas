@@ -8,6 +8,7 @@ import InfoProducts from "../pages/InfoProducts";
 import Trolley from "../pages/Trolley";
 import Buys from "../pages/Buys";
 import NotFound from "../pages/NotFound";
+import SuccessFull from "../pages/SuccessFull";
 //import StatesComponents from "../useContex/StatesComponents";
 //import PizzaContext from "../useContex/PizzaContext";
 
@@ -33,6 +34,7 @@ const AppRoutes = () => {
             <Route path="infoProducts" element={<InfoProducts />} />
             <Route path="trolley" element={<Trolley />} />
             <Route path="buys" element={<Buys />} />
+            <Route path="successFull" element={<SuccessFull />} />
             <Route path="/" component={<Navigate to="/StartSeccion" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
