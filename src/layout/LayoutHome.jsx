@@ -4,11 +4,11 @@ import iconHome from '../assets/book.png'
 import iconBasket from '../assets/basket.png'
 import iconSearch from '../assets/search.png'
 import { Home } from '../home/Home'
-import { PizzaContext } from '../useContex/PizzaContext';
+// import { PizzaContext } from '../useContex/PizzaContext';
 
 const LayoutHome = () => {
 
-    const { toDetails } = useContext(PizzaContext);
+    // const { toDetails } = useContext(PizzaContext);
 
     return (
         <>
@@ -27,7 +27,7 @@ const LayoutHome = () => {
 
                 <section className='section__navegacion'>
                     <div>
-                        <a href="#" onClick={toDetails}>
+                        <a href="#">
                             <img src={iconHome} alt="" className='section__navegacion--svg'/>
                             <p>Home</p>
                         </a>
