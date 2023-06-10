@@ -1,0 +1,63 @@
+.section__layoutHome {
+  height: 100vh;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section__usuarioIngresado {
+  background-color: #FDF0EE;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.section__imageUsuario {
+  background-image: url(../assets/cris.jpg);
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 100px;
+  border: transparent;
+}
+.section__navegacion {
+  width: 355px;
+  height: 50px;
+  background-image: url(../assets/baseNavegacion.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+.section__navegacion a {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+.section__navegacion img, .section__navegacion a {
+  filter: invert(0%) sepia(3%) saturate(0%) hue-rotate(267deg) brightness(101%) contrast(104%);
+  transition: 0.5s;
+}
+.section__navegacion img:hover, .section__navegacion a:hover {
+  filter: invert(22%) sepia(76%) saturate(4342%) hue-rotate(333deg) brightness(97%) contrast(98%);
+}
+.section__navegacion--svg {
+  width: 20px;
+}
+.section__carrito {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 2;
+  transform: translate(153px, -30px);
+  box-shadow: 0 2px 5px 3px rgba(128, 128, 128, 0.274);
+}
+
+/*# sourceMappingURL=layoutStyle.css.map */
