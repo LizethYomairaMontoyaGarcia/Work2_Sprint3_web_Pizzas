@@ -3,12 +3,14 @@ import PizzaCounter from '../components/pizzaCounter/PizzaCounter'
 import "./styleDetails.scss"
 import ButtonPrice from '../components/buttons/ButtonPrice'
 import ButtonReview from '../components/buttons/ButtonReview'
-import imgStart from '../assets/iconmonstr-star-filled.svg';
 import ButtonShopping from '../components/buttons/ButtonShopping'
 import ButtonPay from '../components/buttons/ButtonPay'
-import ButtonPayNow from '../components/buttons/ButtonPayNow'
+import ButtonSearchProducts from '../components/buttons/buttonSearch/ButtonSearchProducts'
 
 const Details = () => {
+
+
+  
   return (
     <>
             <section className='details'>

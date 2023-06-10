@@ -1,9 +1,11 @@
 import React from 'react'
+import Details from '../details/Details'
 
 const InfoProducts = () => {
   return (
     <div>
-      </div>
+       <Details/>
+    </div>
   )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import "./styleButtons.scss";
-import start from "../../assets/star.svg"
 
 const ButtonReview = () => {
   return (

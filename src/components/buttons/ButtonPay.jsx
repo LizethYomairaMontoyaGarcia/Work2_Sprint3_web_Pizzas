@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ButtonPay = () => {
+  const [pay, setPay] = useState("");
   return (
     <>
-        <button className='button-pay'>Pagar</button>
+        <button 
+        id= "buttonPay" 
+        className='button-pay'
+        value={"buttonPay"}
+        onClick={setPay}
+        >Pagar</button>
     </>
     
   )
