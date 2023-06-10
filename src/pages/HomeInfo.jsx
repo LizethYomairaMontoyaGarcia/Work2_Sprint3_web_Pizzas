@@ -1,10 +1,10 @@
 import React from 'react'
-import { Home } from '../home/Home'
+import LayoutHome from '../layout/LayoutHome'
 
 const HomeInfo = () => {
   return (
    <>
-   <Home />
+   <LayoutHome />
    </>
   )
 }
