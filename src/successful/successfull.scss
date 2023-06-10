@@ -1,0 +1,36 @@
+.successfull {
+  background-color: rgb(253, 237, 237);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 90%;
+    width: 90%;
+    background-color: white;
+    margin-top: 70px;
+  }
+  h1 {
+    font-size: 2.4rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }
+  p {
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(167, 167, 167);
+  }
+  button {
+    background-color: rgb(252, 56, 98);
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

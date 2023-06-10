@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import GifExit from "../images/gifcompras.gif";
+import "./successfull.scss";
 
 const Successful = () => {
   return (
-    <div>Successful</div>
-  )
-}
+    <>
+      <div className="successfull">
+        <img src={GifExit} alt="Exitoso" />
 
-export default Successful
+        <h1>Tu pedido está en proceso</h1>
+        <p>Serás notificado cuando llegue el repartidor.</p>
+
+        <button type="submit">Aceptar</button>
+      </div>
+    </>
+  );
+};
+
+export default Successful;
