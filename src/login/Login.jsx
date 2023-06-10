@@ -11,6 +11,10 @@ import "./login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
+  const handleButton = () => {
+    console.log("entre");
+
+  };
   const { setUserName } = useContext(searchParamsContext);
 
   const handleSubmit = async (values) => {
@@ -20,7 +24,7 @@ const Login = () => {
       if (data.length > 0) {
         setUserName(userName);
         sessionStorage.setItem("userName", userName); // Guardar en sessionStorage
-        navigate(`homeInfo/${userName}`);
+        navigate(`/homeInfo/${userName}`);
         console.log("Ingreso exitoso");
       } else {
         console.log("Ingreso No exitoso");
@@ -93,7 +97,9 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="loginForm__submit">
+          <button type="submit" className="loginForm__submit" onClick={() => {
+            handleButton();
+          }}>
             Iniciar sesión
           </button>
           <div className="loginForm__info">
