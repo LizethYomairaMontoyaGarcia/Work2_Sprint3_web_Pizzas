@@ -1,8 +1,11 @@
 import React from 'react'
+import LayoutHome from '../layout/LayoutHome'
 
 const HomeInfo = () => {
   return (
-    <div>HomeInfo</div>
+   <>
+   <LayoutHome />
+   </>
   )
 }
 
