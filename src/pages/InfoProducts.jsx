@@ -1,11 +1,15 @@
 import React from 'react'
 import Details from '../details/Details'
+import LayoutHomeUp from '../layout/LayoutHomeUp'
+import LayoutHomeDown from '../layout/LayoutHomeDown'
 
 const InfoProducts = () => {
   return (
-    <div>
-      <Details/>
-      </div>
+    <>
+      <LayoutHomeUp />
+      <Details />
+      <LayoutHomeDown />
+    </>
   )
 }
 

@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { PizzaContext } from "./PizzaContext";
 import { useNavigate } from 'react-router-dom';
 
 const StatesComponents = ({ children }) => {
-  // const [seleccion, setSeleccion] = useState("Viaje redondo");
+
   const navigate = useNavigate();
 
+  //Para pintar el botón seleccionado (Home o Buscar)
+  const [btnsHome, setBtnsHome] = useState(false);
 
-  const toDetails = () => {
-    console.log("Hice click y me fuí");
-    navigate("/");
+  const toggleBtnsHome = (btnSeleccionado) => {
+    setBtnsHome(btnSeleccionado === btnsHome ? null : btnSeleccionado)
   }
+  ///////////////////////
+
+  //Para redirigir los botones del home
+  const toHome = () => {
+    console.log("Hice click en home");
+    navigate("/homeInfo");
+  }
+
+  const toFilter = () => {
+    console.log("Hice click en buscar");
+    navigate("/infoProducts");
+  }
+  ///////////////////////
 
   return (
     <PizzaContext.Provider
       value={{
-        toDetails
+        toHome,
+        toFilter,
+        btnsHome,
+        setBtnsHome, 
+        toggleBtnsHome
       }}
     >
       {children}
