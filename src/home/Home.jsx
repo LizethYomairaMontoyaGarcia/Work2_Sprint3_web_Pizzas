@@ -2,7 +2,7 @@ import React from 'react';
 import './home.scss';
 import InfoSliderProducts from '../sliderProducts/InfoSliderProducts';
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className="section__homePrincipal">
       <section className='section__contenidoHome'>
@@ -43,3 +43,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home
