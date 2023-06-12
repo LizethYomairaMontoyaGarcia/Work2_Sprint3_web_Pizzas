@@ -1,39 +1,16 @@
-import React from "react";
+import React, {useState, useReducer} from "react";
 import { PizzaContext } from "./PizzaContext";
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useReducer, useState } from "react";
-import axios from "axios";
-import {PizzaContext} from "./PizzaContext";
-import { useNavigate } from "react-router-dom";
 import Buys from "../pages/Buys";
-import { getPizzas } from "../services/getPizzas";
-// import HomeInfo from "../pages/HomeInfo"
-// import InfoProducts from "../pages/InfoProducts"
-// import Products from "../pages/Products";
-// import StartSession from "../pages/StartSession";
 
 const StatesComponents = ({ children }) => {
+  const [userName, setUserName] = useState("");
   const [pizzas, setPizzas] = useState([]);
   const [selectButton, setButton] = useState("");
   const [selectPizza, setSelectPizza] = useState([ ]);
   const [searchPizzas, setSearchPizzas] = useState("");
+  const [buscarTermino, setBuscarTermino] = useState('');
   const [filteredPizzas, setFilteredPizzas] = useState("");
-
-  useEffect(() => {
-    const axiosData = async () => {
-      try {
-        const data = await getPizzas();
-        setPizzas(data);
-        console.log("informacion de set pizzas", setPizzas);
-      } catch (error) {
-        console.error('Error al obtener los datos de las pizzas:', error);
-      }
-    };
-    axiosData();
-  }, []);
-
-  
-  
   const navigate = useNavigate();
   
   const types = {
@@ -77,8 +54,8 @@ const handleClick = () => {
 //         navigate("/Buy");
 //         // console.log("esta es la informacion de PARAMS: ",  params);
 //         // console.log(seleccion);
-//         // console.log(dateButtonOrigen);
-//         // console.log(dateButtonDestino);
+//         // console.log(counter);
+//         // console.log(selectPizza);
 //       }
 //     } else if (selectButton === "buttonPayNow") {
            
@@ -90,7 +67,7 @@ const handleClick = () => {
 //         navigate("/buys");
 //         console.log("estoy haciendo click en button: ", seleccion);
 //         console.log(seleccion);
-//         console.log(dateButtonOrigen);
+//         console.log();
 //       }
   }
 };
@@ -111,7 +88,9 @@ const handleClick = () => {
         setSearchPizzas,
         filteredPizzas,
         setFilteredPizzas,
-       
+        buscarTermino,
+        setBuscarTermino
+
       }}
     >
       {children}

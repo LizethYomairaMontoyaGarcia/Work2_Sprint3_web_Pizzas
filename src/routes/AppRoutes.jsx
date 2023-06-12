@@ -31,7 +31,7 @@ const AppRoutes = () => {
             <Route path="/" element={<StartSession />} />
             <Route path="homeInfo" element={<HomeInfo />} />
             <Route path="products" element={<Products />} />
-            <Route path="infoProducts" element={<InfoProducts />} /> 
+            <Route path="infoProducts" element={<InfoProducts />} />
             <Route path="trolley" element={<Trolley />} />
             <Route path="buys" element={<Buys />} />
             <Route path="successFull" element={<SuccessFull />} />
