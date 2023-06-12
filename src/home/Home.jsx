@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.scss';
-import Products from '../products/Products';
+import InfoSliderProducts from '../sliderProducts/InfoSliderProducts';
 
 export const Home = () => {
   return (
@@ -36,7 +36,7 @@ export const Home = () => {
         </div>
         <div className='section__cardsPizzas'>
           {/* CARDS */}
-          <Products />
+          <InfoSliderProducts />
         </div>
       </section>
       <section></section>
