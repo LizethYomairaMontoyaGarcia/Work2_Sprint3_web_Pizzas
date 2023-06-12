@@ -11,14 +11,13 @@
     
     &__search{
         @include buttonSquare(
-        $widthM, 
-        $colorpink, 
-        $borderFucsia,
+        $widthXl, 
+        $colorWhite, 
+        $borderWhite,
         $colorGrey, 
-        $hoverPink, 
+        $colorPink, 
         $colorFucsia)  
     }
-
     &__search-button {
         width: 100%;
         height: 50px;

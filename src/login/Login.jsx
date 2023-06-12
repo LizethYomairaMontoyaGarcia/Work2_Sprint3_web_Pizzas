@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import PizzaLogin from "../images/iconoPizaLogin.png";
 import { users } from "../services/users";
-import { searchParamsContext } from "../routes/AppRoutes";
+// import { searchParamsContext } from "../routes/AppRoutes";
 import * as Yup from "yup";
 import "./login.scss";
+import { PizzaContext } from "../useContex/PizzaContext";
 //import User from "../images/usuario.jpg";
 
 const Login = () => {
@@ -15,7 +16,7 @@ const Login = () => {
     console.log("entre");
 
   };
-  const { setUserName } = useContext(searchParamsContext);
+  const { userName, setUserName } = useContext(PizzaContext);
 
   const handleSubmit = async (values) => {
     const { userName, password } = values;

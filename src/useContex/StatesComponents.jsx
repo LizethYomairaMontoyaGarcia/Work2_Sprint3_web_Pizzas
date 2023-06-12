@@ -75,6 +75,8 @@ const handleClick = () => {
   return (
     <PizzaContext.Provider
       value={{
+        userName,
+        setUserName,
         pizzas,
         setPizzas,
         selectButton,

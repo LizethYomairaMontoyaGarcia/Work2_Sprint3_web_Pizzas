@@ -60,6 +60,8 @@
     align-items: center;
     transition: 0.5s;
     font-family: $title;
+    display: flex;
+    justify-content: space-between;
 
     &:hover{
         background-color: $hoverBagra;

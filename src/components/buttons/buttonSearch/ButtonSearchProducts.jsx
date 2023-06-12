@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { getPizzas } from '../../../services/getPizzas';
 import imgSearch from "../../../assets/search.svg";
 import { PizzaContext } from '../../../useContex/PizzaContext';
+import "./styleButtonsSearchs.scss"
 
 const ButtonSearchProducts = ({ handleClick }) => {
   
   const {pizzas, 
-    setPizzas
+    setPizzas,
   } = useContext(PizzaContext);
   
   const [buscarTermino, setBuscarTermino] = useState('');
@@ -46,7 +47,7 @@ const ButtonSearchProducts = ({ handleClick }) => {
             value={buscarTermino}
             onChange={(e) => setBuscarTermino(e.target.value)}
           />
-          <img src={imgSearch} className='input__lupa' alt='lupa' />
+          <img src={imgSearch}  className='input__lupa' alt='lupa' />
         </div>
 
         <div className="section__scrollPizzas">

@@ -1,11 +1,10 @@
 import React from 'react'
-import ButtonSearchProducts from '../components/buttons/buttonSearch/ButtonSearchProducts'
+import Details from '../details/Details'
 
 const Products = () => {
   return (
     <>
-      <h1> estoy en la pagina de productos</h1>
-      <ButtonSearchProducts/>
+      <Details/>
     </>
   )
 }
