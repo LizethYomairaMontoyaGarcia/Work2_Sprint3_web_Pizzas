@@ -29,7 +29,7 @@ const StatesComponents = ({ children }) => {
   
     const toFilter = () => {
       console.log("Hice click en buscar");
-      navigate("/filter");
+      navigate("/infoProducts");
     }
     ///////////////////////
   

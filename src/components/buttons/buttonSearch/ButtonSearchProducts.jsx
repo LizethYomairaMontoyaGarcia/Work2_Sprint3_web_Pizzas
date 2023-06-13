@@ -38,12 +38,12 @@ const ButtonSearchProducts = ({ handleClick }) => {
 
   return (
     <>
-      <h1>Buscar productos</h1>
       <section className='section__search-pizzas'>
         <div className='section__search'>
           <input
             type="text"
             className='section__search-input'
+            placeholder='Pizza de peperoni, mexicana, hawaiana, de pollo'
             value={buscarTermino}
             onChange={(e) => setBuscarTermino(e.target.value)}
           />
