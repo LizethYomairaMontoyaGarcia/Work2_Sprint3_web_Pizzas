@@ -4,7 +4,7 @@ import imgSearch from "../../../assets/search.svg";
 import { PizzaContext } from '../../../useContex/PizzaContext';
 import "./styleButtonsSearchs.scss"
 
-const ButtonSearchProducts = ({ handleClick }) => {
+const ButtonSearchProducts = () => {
   
   const {pizzas, 
     setPizzas,
@@ -56,7 +56,7 @@ const ButtonSearchProducts = ({ handleClick }) => {
               key={index}
               value={"buttonPizza"}
               className='section__search-button'
-              onClick={() => handleClick(item.name)}
+              // onClick={() => handleClick(item.name)}
             >
               <h3>{item.name}</h3>
               <div id="contenedorImagenes">
