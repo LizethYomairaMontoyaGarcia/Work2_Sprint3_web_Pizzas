@@ -1,6 +1,4 @@
 import axios from "axios";
-// const URL_API = "http://shaded-voracious-perigee.glitch.me/pizzas";
-
 
 export const getPizzas = async () => {
     try {

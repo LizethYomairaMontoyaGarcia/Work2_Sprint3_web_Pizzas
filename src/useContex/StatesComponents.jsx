@@ -1,40 +1,18 @@
-import React, { useState } from "react";
+import React, {useState, useReducer} from "react";
 import { PizzaContext } from "./PizzaContext";
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useReducer, useState } from "react";
-import axios from "axios";
-import {PizzaContext} from "./PizzaContext";
-import { useNavigate } from "react-router-dom";
 import Buys from "../pages/Buys";
-import { getPizzas } from "../services/getPizzas";
-// import HomeInfo from "../pages/HomeInfo"
-// import InfoProducts from "../pages/InfoProducts"
-// import Products from "../pages/Products";
-// import StartSession from "../pages/StartSession";
 
 const StatesComponents = ({ children }) => {
+  const [userName, setUserName] = useState("");
   const [pizzas, setPizzas] = useState([]);
   const [selectButton, setButton] = useState("");
   const [selectPizza, setSelectPizza] = useState([ ]);
   const [searchPizzas, setSearchPizzas] = useState("");
-  const [filteredPizzas, setFilteredPizzas] = useState("");}
-
-  useEffect(() => {
-    const axiosData = async () => {
-      try {
-        const data = await getPizzas();
-        setPizzas(data);
-        console.log("informacion de set pizzas", setPizzas);
-      } catch (error) {
-        console.error('Error al obtener los datos de las pizzas:', error);
-      }
-    };
-    axiosData();
-  }, []);
-
-  
-
+  const [buscarTermino, setBuscarTermino] = useState('');
+  const [filteredPizzas, setFilteredPizzas] = useState("");
   const navigate = useNavigate();
+
 
   //Para pintar el botón seleccionado (Home o Buscar)
   const [btnsHome, setBtnsHome] = useState(false);
@@ -47,7 +25,7 @@ const StatesComponents = ({ children }) => {
   //Para redirigir los botones del home
   const toHome = () => {
     console.log("Hice click en home");
-    navigate("/homeInfo");
+    navigate("/homeInfo");}
   
     const toFilter = () => {
       console.log("Hice click en buscar");
@@ -96,8 +74,8 @@ const handleClick = () => {
 //         navigate("/Buy");
 //         // console.log("esta es la informacion de PARAMS: ",  params);
 //         // console.log(seleccion);
-//         // console.log(dateButtonOrigen);
-//         // console.log(dateButtonDestino);
+//         // console.log(counter);
+//         // console.log(selectPizza);
 //       }
 //     } else if (selectButton === "buttonPayNow") {
            
@@ -109,14 +87,17 @@ const handleClick = () => {
 //         navigate("/buys");
 //         console.log("estoy haciendo click en button: ", seleccion);
 //         console.log(seleccion);
-//         console.log(dateButtonOrigen);
+//         console.log();
 //       }
+//   }
+// };
   }
-};
-
+}
   return (
     <PizzaContext.Provider
       value={{
+        userName,
+        setUserName,
         pizzas,
         setPizzas,
         selectButton,
@@ -134,12 +115,16 @@ const handleClick = () => {
         toFilter,
         btnsHome,
         setBtnsHome, 
-        toggleBtnsHome
+        toggleBtnsHome,
+        buscarTermino,
+        setBuscarTermino
+
       }}
     >
       {children}
     </PizzaContext.Provider>
+  
   );
-};
+}
 
 export default StatesComponents;
