@@ -9,6 +9,7 @@ import Buys from "../pages/Buys";
 import NotFound from "../pages/NotFound";
 import SuccessFull from "../pages/SuccessFull";
 import StatesComponents from "../useContex/StatesComponents";
+import ButtonSearchProducts from "../components/buttons/buttonSearch/ButtonSearchProducts";
 
 const AppRoutes = () => {
   
@@ -22,6 +23,7 @@ const AppRoutes = () => {
             <Route path="homeInfo" element={<HomeInfo />} />
             <Route path="products" element={<Products />} />
             <Route path="infoProducts" element={<InfoProducts />} />
+            <Route path="filter" element={<ButtonSearchProducts />} />
             <Route path="trolley" element={<Trolley />} />
             <Route path="buys" element={<Buys />} />
             <Route path="successFull" element={<SuccessFull />} />
