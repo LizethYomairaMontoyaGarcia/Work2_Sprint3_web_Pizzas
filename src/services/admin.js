@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_ADMIN = "http://localhost:3000/admin";
+const API_ADMIN = "http://shaded-voracious-perigee.glitch.me/admin";
 
 export const admin = async (userName, password) => {
   try {
