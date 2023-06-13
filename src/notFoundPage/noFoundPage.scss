@@ -65,7 +65,9 @@ $roni: #F61D54;
   }
 }
 
-body {
+.contenidoNotFound {
+  display: flex;
+  flex-direction: column;
   &:before {
     content: '';
     position: absolute;
