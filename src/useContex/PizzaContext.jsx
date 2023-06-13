@@ -1,3 +1,2 @@
-import { createContext } from "react";
-const PizzaContext = {}
-export default PizzaContext;
+import { createContext } from 'react';
+export const PizzaContext = createContext();

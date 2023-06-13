@@ -5,7 +5,6 @@ import { pizzaApi, pizzaApiGet } from "../services/Pizzas";
 import "./formularioAdmin.scss";
 // import pizzaFond from "../images/pizzaFondo.jpg"
 
-
 const FormularioAdmin = () => {
   const handleSubmit = async (values) => {
     const listPizzas = await pizzaApiGet();

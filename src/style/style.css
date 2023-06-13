@@ -1,32 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:wght@900&family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:ital,wght@0,100;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:wght@900&family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:ital,wght@0,100;1,500&display=swap");
-.counter {
-  width: 22.5rem;
-  background-color: #F61D54;
-  color: white;
-  display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Climate+Crisis&family=Geologica&family=Konkhmer+Sleokchher&family=Lato:wght@900&family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:ital,wght@0,100;1,500&display=swap");
+/*  COLORS */
+/*  FOONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
 }
-.counter__container {
-  width: 10rem;
-  background-color: #F61D54;
-  color: white;
-}
-.counter__buttons {
-  width: 3rem;
-  height: 3rem;
-  background-color: #F61D54;
-  color: white;
-}
-.counter__buy {
-  width: 5rem;
-  background-color: #F61D54;
-  color: white;
-}
-.counter__btnPay {
-  width: 6rem;
-  height: 3rem;
-  background-color: white;
-  color: gray;
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,9 +10,8 @@ const reducer = (state, action) => {
     switch (action.type) {
         case types.increment:
             return state + 1;
-
         case types.decrement:
-            return state - 1;
+            return state>0 ? state - 1 : state = 0;
 
         case types.reset:
             return 0;
@@ -27,33 +26,17 @@ const PizzaCounter = () => {
 
     return (
         <>
-           <section className='counter'>
-           <div className='counter__container'>
+           <div className='counter'>
                 <button className='counter__buttons' onClick={() => dispach({ type: types.decrement })}>
                     -
                 </button>
-                <button className='counter__buttons'>
+                <button className='counter__date'>
                     {counter}
                 </button>
-                <button className='counter__buttons' onClick={() => dispach({ type: types.increment })}>
+                < button className='counter__buttons' onClick={() => dispach({ type: types.increment })}>
                     +
                 </button>
             </div >
-            <div>
-                <button className='counter__buy'>
-                    <figure>
-                        <img src="#" alt="btn-buy" />
-                    </figure>
-                </button>
-            </div>
-            <div>
-                <button className='counter__btnPay'>
-                    Pagar
-                </button>
-            </div>
-            
-           </section>
-
         </>
     )
 }

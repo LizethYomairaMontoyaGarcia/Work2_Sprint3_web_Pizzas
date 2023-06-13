@@ -16,15 +16,18 @@
       filter: invert(1);
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: white;
     }
   }
 
   &__title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   &__text {
@@ -50,7 +53,8 @@
     width: 100%;
     height: 100%;
     // border: none;
-    background: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.322);
     color: white;
     font-size: 1rem;
     padding: 3px;
@@ -79,10 +83,14 @@
     h3 {
       color: white;
       font-size: 1.2rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
     p {
       color: white;
       font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -100,7 +108,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba(1, 0, 0, 0.3);
+      background-color: rgba(1, 0, 0, 0.253);
       z-index: -1;
     }
   }
