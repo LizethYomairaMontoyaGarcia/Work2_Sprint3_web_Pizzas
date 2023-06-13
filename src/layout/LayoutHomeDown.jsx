@@ -37,7 +37,7 @@ const LayoutHomeDown = () => {
                     >
                         <a href="#" onClick={() => { buttonsHome.link(); toggleBtnsHome(keyBtnsHome); }}>
                             <img src={buttonsHome.icon} alt="" className="section__navegacion--svg" />
-                            <p>{buttonsHome.title}</p>
+                            <h4>{buttonsHome.title}</h4>
                         </a>
                     </div>
                 ))}

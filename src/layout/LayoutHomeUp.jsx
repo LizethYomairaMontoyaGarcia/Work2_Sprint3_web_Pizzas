@@ -31,7 +31,7 @@ const LayoutHomeUp = () => {
                 <section className="section__usuarioIngresado">
                     <div className="section__contenidoUsuario">
                         <h1>Home</h1>
-                        <p>¡Qué bueno verte Cris!</p>
+                       ¡Qué bueno verte Cris!
                     </div>
                     <button className="section__imageUsuario"></button>
                 </section>

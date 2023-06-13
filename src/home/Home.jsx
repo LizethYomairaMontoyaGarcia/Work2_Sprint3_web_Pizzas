@@ -14,21 +14,21 @@ const Home = () => {
           <div className='section__scrollCupones'>
             <button className='section__botonesCupones'>
               <div className='section__cuponBase'>
-                <p>Cupón para Frontends</p>
+                <h5>Cupón para Frontends</h5>
                 <h1>45% OFF</h1>
               </div>
             </button>
 
             <button className='section__botonesCupones'>
               <div className='section__cuponBase'>
-                <p>Cupón Pizza CSS</p>
+                <h5>Cupón Pizza CSS</h5>
                 <h1>25% OFF</h1>
               </div>
             </button>
 
             <button className='section__botonesCupones'>
               <div className='section__cuponBase'>
-                <p>Cupón para Frontends</p>
+                <h5> Cupón para Frontends</h5>
                 <h1>45% OFF</h1>
               </div>
             </button>
