@@ -1,0 +1,71 @@
+.adminForm {
+  margin: auto;
+  padding: 1em 2em;
+  h1 {
+    font-size: 2.3rem;
+    align-items: center;
+    text-align: center;
+  }
+  p {
+    font-size: 1.1rem;
+    align-items: center;
+    margin-top: 50px;
+  }
+  &__subt {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  &__form {
+    margin-top: 1.8em;
+    display: grid;
+    
+  }
+
+  &__label {
+    margin-top: 1px;
+    margin-bottom: 3px;
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: none;
+    font-size: 1rem;
+    padding: 3px;
+  }
+  &__x {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  &__submit {
+    background-color: rgb(238, 158, 238);
+    color: #000;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.admin {
+    &__img-background {
+      background-image: url("../images/adminpizza.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: brightness(0.8);
+      width: 360px;
+      height: 110px;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 0, 0, 0.144);
+        z-index: -1;
+      }
+    }
+  }

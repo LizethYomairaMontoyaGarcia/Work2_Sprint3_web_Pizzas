@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_ADMIN = "http://localhost:3000/users";
+const API_ADMIN = "http://localhost:3000/admin";
 
-export const users = async (userName, password) => {
+export const admin = async (userName, password) => {
   try {
     const url = `${API_ADMIN}?userName=${userName.trim()}&password=${password.trim()}`;
     const { data } = await axios.get(url);
@@ -13,3 +13,4 @@ export const users = async (userName, password) => {
     return [];
   }
 };
+

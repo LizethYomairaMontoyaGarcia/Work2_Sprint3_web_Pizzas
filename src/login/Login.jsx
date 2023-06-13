@@ -1,4 +1,3 @@
-//import "./login.sass";
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -7,13 +6,12 @@ import { users } from "../services/users";
 import { searchParamsContext } from "../routes/AppRoutes";
 import * as Yup from "yup";
 import "./login.scss";
-//import User from "../images/usuario.jpg";
+import { admin } from "../services/admin";
 
 const Login = () => {
   const navigate = useNavigate();
   const handleButton = () => {
     console.log("entre");
-
   };
   const { setUserName } = useContext(searchParamsContext);
 
@@ -21,10 +19,18 @@ const Login = () => {
     const { userName, password } = values;
     try {
       const data = await users(userName, password);
+      const dataAdmin = await admin(userName, password);
+
       if (data.length > 0) {
         setUserName(userName);
-        sessionStorage.setItem("userName", userName); // Guardar en sessionStorage
-        navigate(`/homeInfo/${userName}`);
+        sessionStorage.setItem("userNameUser", userName);
+        navigate(`homeInfo?username=${userName}`);
+        console.log("Ingreso exitoso");
+      } else if (dataAdmin.length > 0) {
+        setUserName(userName);
+        sessionStorage.setItem("userNameAdmin", userName);
+        navigate("formAdmin");
+
         console.log("Ingreso exitoso");
       } else {
         console.log("Ingreso No exitoso");
@@ -32,11 +38,6 @@ const Login = () => {
     } catch (error) {
       console.log(error);
     }
-  };
-
-  const initialValues = {
-    userName: "",
-    password: "",
   };
 
   const validationSchema = Yup.object({
@@ -47,7 +48,10 @@ const Login = () => {
   return (
     <div className="login__img-background">
       <Formik
-        initialValues={initialValues}
+        initialValues={{
+          userName: "",
+          password: "",
+        }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
@@ -66,7 +70,6 @@ const Login = () => {
             <label htmlFor="userName" className="loginForm__label">
               Nombre de usuario
             </label>
-            {/* <img src={User} alt="" /> */}
             <Field
               type="text"
               id="userName"
@@ -97,9 +100,13 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="loginForm__submit" onClick={() => {
-            handleButton();
-          }}>
+          <button
+            type="submit"
+            className="loginForm__submit"
+            onClick={() => {
+              handleButton();
+            }}
+          >
             Iniciar sesión
           </button>
           <div className="loginForm__info">

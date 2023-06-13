@@ -9,6 +9,7 @@ import Trolley from "../pages/Trolley";
 import Buys from "../pages/Buys";
 import NotFound from "../pages/NotFound";
 import SuccessFull from "../pages/SuccessFull";
+import FormAdmin from "../pages/FormAdmin";
 //import StatesComponents from "../useContex/StatesComponents";
 //import PizzaContext from "../useContex/PizzaContext";
 
@@ -29,6 +30,7 @@ const AppRoutes = () => {
           <Routes>
             {/* <Route path="/" element={<App />} /> */}
             <Route path="/" element={<StartSession />} />
+            <Route path="formAdmin" element={<FormAdmin />} />
             <Route path="homeInfo" element={<HomeInfo />} />
             <Route path="products" element={<Products />} />
             <Route path="infoProducts" element={<InfoProducts />} />
