@@ -1,6 +1,7 @@
 .section {
 
     &__layoutHome {
+        margin-top: 130px;
         background-color: orange;
         display: flex;
         flex-direction: column;
@@ -8,10 +9,13 @@
     }
 
     &__usuarioIngresado {
+        width: 100%;
+        height: auto;
         background-color: #FDF0EE;
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        align-items: center;
+        padding: 15px;
     }
 
     &__imageUsuario {
@@ -26,8 +30,8 @@
     &__navegacion {
         position: absolute;
         z-index: 50;
-        transform: translateY(-70px);
-        width: 355px;
+        transform: translateY(-175px);
+        width: 380px;
         height: 50px;
         background-image: url(../assets/baseNavegacion.png);
         background-size: cover;
@@ -38,7 +42,8 @@
     }
 
     &__enlacesHome a {
-        filter: invert(0%) sepia(3%) saturate(0%) hue-rotate(267deg) brightness(101%) contrast(104%);
+        font-weight: 200;
+        filter: invert(52%) sepia(35%) saturate(0%) hue-rotate(133deg) brightness(94%) contrast(95%);
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -70,7 +75,7 @@
         border-radius: 100px;
         position: absolute;
         z-index: 2;
-        transform: translate(153px, -30px);
+        transform: translate(155px, -30px);
         box-shadow: 0 3px 5px 4px rgba(0, 0, 0, 0.651);
 
         & img{

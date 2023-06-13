@@ -7,10 +7,12 @@
 
 .section {
     &__homePrincipal {
-        width: 100%;
+        transform: translate(0);
+        width: 380px;
         height: 100vh;
         overflow-y: scroll;
-        background-color: rgb(255, 255, 255);
+        background-color: #FDF0EE;
+        margin-bottom: 50px;
     }
 
     &__pizzasDisponibles {
@@ -44,7 +46,7 @@
 
     &__botonesCupones {
         width: 180px;
-        height: 80px;
+        height: 90px;
         padding: 10px;
         border: transparent;
         cursor: pointer;
@@ -53,10 +55,10 @@
         align-items: center;
         justify-content: center;
         background-color: transparent;
+        color: white;
 
-        & p {
-            font-size: 10px;
-            color: white;
+        & h5{
+            font-weight: 200;
             margin-bottom: 5px;
         }
 
@@ -68,7 +70,7 @@
 
     &__cuponBase{
         width: 110%;
-        height: 120%;
+        height: 130%;
         background-image: url(../assets/CUPON.svg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -77,7 +79,7 @@
         align-items: flex-start;
         justify-content: center;
 
-        & p, h1{
+        & h5, h1{
             transform: translate(20px, 3px);
         }
     }

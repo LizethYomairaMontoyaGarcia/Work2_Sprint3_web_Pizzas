@@ -118,7 +118,6 @@ const handleClick = () => {
         toggleBtnsHome,
         buscarTermino,
         setBuscarTermino
-
       }}
     >
       {children}
