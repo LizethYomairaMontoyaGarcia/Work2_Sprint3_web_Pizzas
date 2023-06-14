@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_PIZZA = "http://localhost:3000/pizzas";
+const API_PIZZA = "http://shaded-voracious-perigee.glitch.me/pizzas";
 
 export const pizzaApi = async (newPizza) => {
   try {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_FAKE = "http://localhost:3000/users";
+const API_FAKE = "http://shaded-voracious-perigee.glitch.me/users";
 
 export const users = async (userName, password) => {
   try {
