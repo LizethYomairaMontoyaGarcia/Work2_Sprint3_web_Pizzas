@@ -67,7 +67,7 @@ const StatesComponents = ({ children }) => {
   const [counter, dispach] = useReducer(reducer, 0);
 
   const handleClickPay = (counter) => {
-    console.log("hice click en el boton pagar");
+    console.log("hice click en el boton pagar", counter);
     if (counter === 0) {
       Swal.fire("Ooopss", "No has seleccionado la cantidad a comprar", "error");
     } else {

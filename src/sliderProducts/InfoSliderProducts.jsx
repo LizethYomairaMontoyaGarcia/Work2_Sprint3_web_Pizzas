@@ -31,12 +31,18 @@ const InfoSliderProducts = () => {
         axiosData();
     }, []);
 
+    
+
 
     const handleClickPizza = (pizza) => {
         console.log("hice click en esta pizza ", pizza);
+
+        sessionStorage.setItem('selectedPizza', JSON.stringify(pizza));
         Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
           navigate("/products");
         });
+       
+
       }
     
     return (
