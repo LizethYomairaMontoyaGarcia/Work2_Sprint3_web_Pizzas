@@ -12,8 +12,6 @@ const InfoSliderProducts = () => {
     const {
         pizzas,
         setPizzas,
-        selectedPizza,
-        setSelectedPizza
     } = useContext(PizzaContext);
     
     const navigate = useNavigate();
@@ -23,7 +21,6 @@ const InfoSliderProducts = () => {
             try {
                 const data = await getPizzas();
                 setPizzas(data);
-                console.log("informacion de set pizzas en useEfect: ", pizzas);
             } catch (error) {
                 console.error('Error al obtener los datos de las pizzas:', error);
             }
@@ -31,19 +28,10 @@ const InfoSliderProducts = () => {
         axiosData();
     }, []);
 
-    
-
-
     const handleClickPizza = (pizza) => {
-        console.log("hice click en esta pizza ", pizza);
-
         sessionStorage.setItem('selectedPizza', JSON.stringify(pizza));
-        Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
-          navigate("/products");
-        });
-       
-
-      }
+        navigate("/products");
+    };
     
     return (
         <>

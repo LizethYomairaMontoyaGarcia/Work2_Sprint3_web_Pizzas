@@ -7,27 +7,30 @@ import ButtonPay from '../components/buttons/ButtonPay'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Cris from "../assets/cris.jpg"
+import { NavLink } from 'react-router-dom'
 
 const Details = () => {
 
   const infoPizza = JSON.parse(sessionStorage.getItem('selectedPizza'));
-  console.log("infoPizza", infoPizza);
 
   return (
     <>
       <section className='details'>
-        <Carousel className='section__caruselGeneral' autoPlay showIndicators={true} showThumbs={false}>
+        <Carousel className='details__caruselGeneral' autoPlay showIndicators={true} showThumbs={false}>
           <div>
-            <img src={infoPizza.img1} alt="" />
-            <div className='caruselGeneral__overlay'></div>
+            <img src={infoPizza.img1} alt="img1" />
+            <section className="details__link-allPizzas">
+              <NavLink  id="namePizza">Todas las Pizzas</NavLink>           
+            </section>
+          <div className='details__caruselGeneral__overlay'></div>
           </div>
           <div>
-            <img src={infoPizza.img2} alt="" />
-            <div className='caruselGeneral__overlay'></div>
+            <img src={infoPizza.img2} alt="img2" />
+            <div className='details__caruselGeneral__overlay'></div>
           </div>
           <div>
-            <img src={infoPizza.img3} alt="" />
-            <div className='caruselGeneral__overlay'></div>
+            <img src={infoPizza.img3} alt="img3" />
+            <div className='details__caruselGeneral__overlay'></div>
           </div>
         </Carousel>
       </section>

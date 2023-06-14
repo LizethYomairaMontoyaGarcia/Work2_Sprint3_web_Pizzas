@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState} from "react";
 import { PizzaContext } from "./PizzaContext";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -34,59 +34,19 @@ const StatesComponents = ({ children }) => {
       navigate("/infoProducts");
     }
     ///////////////////////
-  
-  const types = {
-    increment: 'increment',
-    decrement: 'decrement',
-    reset: 'reset',
-  }
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case types.increment:
-        return state + 1;
-      case types.decrement:
-        return state > 0 ? state - 1 : state = 0;;
-      case types.reset:
-        return 0;
-      default:
-        return state;
-    }
-  }
-  const handleClickPizza = (pizza) => {
-    console.log("hice click en esta pizza ");
-      setImgPizza(pizza.img1);
-      setNamePizza(pizza.name);
-      setPricePizza(pizza.price);
-      handleClickPizza();
-    Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
-      navigate("/products");
-    });
-  }
-
-  const [counter, dispach] = useReducer(reducer, 0);
-
-  const handleClickPay = (counter) => {
-    console.log("hice click en el boton pagar", counter);
-    if (counter === 0) {
-      Swal.fire("Ooopss", "No has seleccionado la cantidad a comprar", "error");
-    } else {
-      Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
-        navigate("/buys");
-      });
-      console.log("estoy haciendo click en: boton comprar ", counter);
-      const params = {
-
-        counter,
-        selectedPizza
+ 
+    const handleClickPay = () => {
+      const infoCounter = JSON.parse(sessionStorage.getItem('infoCounter'));
+      console.log("Hice click en el botón pagar, la info del contador es:", infoCounter);
+    
+      if (infoCounter === 0 || infoCounter === null) {
+        Swal.fire("Ooops", "No has seleccionado la cantidad a comprar", "error");
+      } else {
+        Swal.fire("Good job!", "¿Deseas seguir con la compra?", "success").then(() => {
+          navigate("/buys");
+        });
       }
-      navigate("/Buy");
-      console.log("esta es la informacion de PARAMS: ", params);
-
-      console.log(counter);
-      console.log(selectedPizza);
-    }
-
-  };
+    };
 
   return (
     <PizzaContext.Provider
@@ -99,10 +59,7 @@ const StatesComponents = ({ children }) => {
         setButton,
         selectedPizza,
         setSelectedPizza,
-        counter,
-        dispach,
         handleClickPay,
-        handleClickPizza,
         searchPizzas,
         setSearchPizzas,
         filteredPizzas,

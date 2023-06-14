@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import "./stylePizzaCounter.scss";
 
 const types = {
@@ -22,18 +22,22 @@ const reducer = (state, action) => {
 }
 
 const PizzaCounter = () => {
-    const [counter, dispach] = useReducer(reducer, 0)
-
+    const [counter, dispatch] = useReducer(reducer, 0)
+    
+    useEffect(() => {
+        sessionStorage.setItem('infoCounter', JSON.stringify(counter));
+      }, [counter]);
+     
     return (
         <>
            <div className='counter'>
-                <button className='counter__buttons' onClick={() => dispach({ type: types.decrement })}>
+                <button className='counter__buttons' onClick={() => dispatch({ type: types.decrement })}>
                     -
                 </button>
                 <button className='counter__date'>
                     {counter}
                 </button>
-                < button className='counter__buttons' onClick={() => dispach({ type: types.increment })}>
+                < button className='counter__buttons' onClick={() => dispatch({ type: types.increment })}>
                     +
                 </button>
             </div >
