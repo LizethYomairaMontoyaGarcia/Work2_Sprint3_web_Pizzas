@@ -5,9 +5,6 @@ import Swal from 'sweetalert2';
 
 const StatesComponents = ({ children }) => {
   const [userName, setUserName] = useState("");
-  // const [imgPizza, setImgPizza] = useState();
-  // const [namePizza, setNamePizza] = useState('');
-  // const [pricePizza, setPricePizza] = useState('');
   const [pizzas, setPizzas] = useState([]);
   const [selectButton, setButton] = useState("");
   const [selectedPizza, setSelectedPizza] = useState([]);
@@ -113,7 +110,7 @@ const StatesComponents = ({ children }) => {
         setBtnsHome,
         toggleBtnsHome,
         buscarTermino,
-        setBuscarTermino
+        setBuscarTermino,
       }}
     >
       {children}

@@ -6,14 +6,7 @@ import { PizzaContext } from "../useContex/PizzaContext";
 const LayoutHomeUp = () => {
 
     const { userName } = useContext(PizzaContext);
-    const [userImage, setUserImage] = useState("");
-
-    useEffect(() => {
-        const storedUserImage = sessionStorage.getItem("userImage");
-        if (storedUserImage) {
-            setUserImage(storedUserImage);
-        }
-    }, []);
+    const userImage = sessionStorage.getItem("userImage"); 
 
     return (
         <>
