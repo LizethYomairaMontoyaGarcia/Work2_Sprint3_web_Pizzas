@@ -54,9 +54,9 @@ const StatesComponents = ({ children }) => {
   }
   const handleClickPizza = (pizza) => {
     console.log("hice click en esta pizza ");
-      setImgPizza(pizza.img1);
-      setNamePizza(pizza.name);
-      setPricePizza(pizza.price);
+      // setImgPizza(pizza.img1);
+      // setNamePizza(pizza.name);
+      // setPricePizza(pizza.price);
       handleClickPizza();
     Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
       navigate("/products");

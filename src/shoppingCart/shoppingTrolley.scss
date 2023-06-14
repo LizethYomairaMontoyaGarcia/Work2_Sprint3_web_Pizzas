@@ -1,4 +1,3 @@
-
 .shoppingTrolley {
   background-color: rgb(253, 237, 237);
   width: 100%;
@@ -25,6 +24,8 @@
 
   &__info {
     font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   &__label {
@@ -63,3 +64,41 @@
     color: rgb(0, 0, 0);
   }
 }
+
+.section {
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  &__carusel {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &__name {
+      font-size: 19px;
+      color: rgb(0, 0, 0);
+    }
+    &__price {
+      font-size: 19px;
+      color: rgb(0, 0, 0);
+      font-weight: 10px;
+      display: flex;
+    }
+  }
+}
+
+// .carousel .control-dots {
+//   position: absolute;
+//   z-index: 200;
+// }

@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Flecha from "../images/flecha.png";
 import "./shoppingTrolley.scss";
+import { Carousel } from "react-responsive-carousel";
 
 const validationSchema = Yup.object({
   fullName: Yup.string().required("El nombre completo es requerido"),
@@ -16,6 +17,18 @@ const validationSchema = Yup.object({
 
 const ShoppingTrolley = () => {
   const navigate = useNavigate();
+
+  const infoPizzaTrolley = JSON.parse(sessionStorage.getItem("selectedPizza"));
+  console.log("infoPizza", infoPizzaTrolley);
+
+  const quantity = JSON.parse(sessionStorage.getItem("infoCounter"));
+  console.log("cantidad de pizza seleccionada", quantity);
+  const paymentValue = (quantity, value) => {
+    const pricetoPay = quantity * value;
+    return pricetoPay;
+  };
+  
+  const total = paymentValue(quantity,infoPizzaTrolley.price);
 
   const initialValues = {
     fullName: "",
@@ -37,6 +50,32 @@ const ShoppingTrolley = () => {
           <img src={Flecha} alt="flecha" />
           <h1>Carrito de compras</h1>
         </div>
+
+        <section className="section">
+          <Carousel
+            className="section__carusel"
+            autoPlay
+            showIndicators={true}
+            showThumbs={false}
+          >
+            <div>
+              <img src={infoPizzaTrolley.img1} alt="" />
+              <div className="carusel__overlay"></div>
+            </div>
+            <div>
+              <img src={infoPizzaTrolley.img2} alt="" />
+              <div className="carusel__overlay"></div>
+            </div>
+            <div>
+              <img src={infoPizzaTrolley.img3} alt="" />
+              <div className="carusel__overlay"></div>
+            </div>
+          </Carousel>
+          <p className="section__name">{infoPizzaTrolley.name}</p>
+          <div>
+            <p className="section__price">{total} </p>
+          </div>
+        </section>
 
         <h3 className="shoppingTrolley__info">Información de pago</h3>
 
