@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Climate+Crisis&family=Geologica&family=Konkhmer+Sleokchher&family=Lato:wght@900&family=Poppins:ital,wght@0,700;1,400&family=Public+Sans:ital,wght@0,100;1,500&display=swap');
+@import "../style/style.scss";
+
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 23.4rem;
+    height: auto;
+    background-color: $colorBlack;
+    color: $colorWhite;
+
+    &__caruselGeneral {
+        display: flex;
+        width: 23.5rem;
+        height: 15rem;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    
+        & img {
+            width: 100%;
+            height: 100%;
+            background-position: cover;
+            object-fit: cover;
+        }
+    }
+    &__caruselGeneral__overlay{
+        background-image: linear-gradient(to top, black, 10%, rgba(0, 0, 0, 0.64), 30%, transparent);
+        width: 23.5rem;
+        height: 18rem;
+        transform: translateY(-290px);
+      }
+   
+        
+        &__info{
+        display: flex;
+        flex-direction: column;
+        background-color: $colorBlack;
+        padding: 0.5rem 0.5rem 0 1.1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-weight: 400;
+        font-size: 16px;
+        height: auto;
+    }
+    &__title{
+        @include title($colorWhite)
+    }
+    &__container-buttons{
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    &__container-description{
+        width: 22rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        gap: 0.7rem;
+       
+    }
+    &__subtitle-description{
+        @include subTitle ($colorWhite)
+    }
+
+    &__paragraph-description{
+        @include paragraph();
+    }
+    &__comments{
+        display: flex;
+        height: auto;
+        gap: 0.5rem;
+        color: white;
+       
+        
+    }
+    &__comments-photo{
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+    }
+    &__img-photo{
+        display: flex;
+        background-color: brown;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+    &__comments-info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    height: auto;
+    }
+    &__container-name{
+        width: 17.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__comentary-name{
+        @include subTitle($colorPink);
+    }
+    &__comentary-date{
+       color: $colorGrey;
+    }
+    &__container-favorites{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 15rem;
+    padding: 0.5rem 0 0.3rem 0;
+    }
+    &__comentary{
+    padding-bottom: 0.5rem;
+    }
+
+    &__counter{
+    width: 23rem;
+    display: flex;
+    justify-content: center;
+    justify-items:center;
+    background-color :$colorFucsia;
+    justify-content: space-between;
+    align-items: center;
+    }  
+    &__counter-pay{
+        width:11rem;
+        height: 3rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,115 @@
+.loginForm {
+  margin: auto;
+  max-width: 400px;
+  padding: 2.5em 2em;
+  //colocar variable del color
+  border-radius: 12px;
+  box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+
+  &__logoPiSaaa {
+    text-align: center;
+    margin-bottom: 35;
+    img {
+      width: 100px;
+      height: 100px;
+      transform: rotate(180deg);
+      filter: invert(1);
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: white;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  &__form {
+    margin-top: 1.8em;
+    display: grid;
+  }
+
+  &__label {
+    color: white;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    // border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.322);
+    color: white;
+    font-size: 1rem;
+    padding: 3px;
+  }
+
+  &__x {
+    font-size: 18px;
+    margin-top: 15px;
+    color: white;
+  }
+
+  &__submit {
+    background-color: white;
+    color: #000;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__info {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35;
+    h3 {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    p {
+      color: white;
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+  }
+}
+.login {
+  &__img-background {
+    background-image: url("../images/pizzaFondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.8);
+    width: 100%;
+    height: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1, 0, 0, 0.253);
+      z-index: -1;
+    }
+  }
+}

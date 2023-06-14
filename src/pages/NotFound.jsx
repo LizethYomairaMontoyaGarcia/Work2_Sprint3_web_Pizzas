@@ -1,8 +1,11 @@
 import React from 'react'
+import NoFoundPage from '../notFoundPage/NoFoundPage'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+   <>
+<NoFoundPage />
+   </>
   )
 }
 

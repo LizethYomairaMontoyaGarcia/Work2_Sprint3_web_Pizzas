@@ -1,0 +1,16 @@
+.section__caruselGeneral {
+  display: flex;
+  width: 330px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.carousel .control-dots {
+  position: absolute;
+  z-index: 200;
+}
+
+/*# sourceMappingURL=styleSliderProducts.css.map */

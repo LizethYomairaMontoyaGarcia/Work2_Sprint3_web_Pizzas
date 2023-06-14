@@ -1,8 +1,15 @@
 import React from 'react'
+import LayoutHomeUp from '../layout/LayoutHomeUp'
+import LayoutHomeDown from '../layout/LayoutHomeDown'
+import ButtonSearchProducts from '../components/buttons/buttonSearch/ButtonSearchProducts'
 
 const InfoProducts = () => {
   return (
-    <div>InfoProducts</div>
+    <>
+      <LayoutHomeUp />
+        <ButtonSearchProducts />
+      <LayoutHomeDown />
+    </>
   )
 }
 
