@@ -26,11 +26,13 @@ const Login = () => {
       if (data.length > 0) {
         setUserName(userName);
         sessionStorage.setItem("userNameUser", userName);
+        sessionStorage.setItem("userImage", data[0].image);
         navigate(`homeInfo?username=${userName}`);
         console.log("Ingreso exitoso");
       } else if (dataAdmin.length > 0) {
         setUserName(userName);
         sessionStorage.setItem("userNameAdmin", userName);
+        sessionStorage.setItem("userImage", dataAdmin[0].image);
         navigate("formAdmin");
 
         console.log("Ingreso exitoso");

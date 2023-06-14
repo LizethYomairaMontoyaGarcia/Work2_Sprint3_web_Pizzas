@@ -3,6 +3,7 @@ import { getPizzas } from '../../../services/getPizzas';
 import imgSearch from "../../../assets/search.svg";
 import { PizzaContext } from '../../../useContex/PizzaContext';
 import "./styleButtonsSearchs.scss"
+import InfoSliderProducts from '../../../sliderProducts/InfoSliderProducts'
 
 const ButtonSearchProducts = ({ handleClick }) => {
   
@@ -52,17 +53,20 @@ const ButtonSearchProducts = ({ handleClick }) => {
 
         <div className="section__scrollPizzas">
           {filteredPizzas.map((item, index) => (
-            <button
-              key={index}
-              value={"buttonPizza"}
-              className='section__search-button'
-              onClick={() => handleClick(item.name)}
-            >
-              <h3>{item.name}</h3>
+            // <button
+            //   key={index}
+            //   value={"buttonPizza"}
+            //   className='section__search-button'
+            //   onClick={() => handleClick(item.name)}
+            // >
+            <>
+              {/* <h3>{item.name}</h3> */}
               <div id="contenedorImagenes">
-                <img src={item.img} alt="" />
+                {/* <img src={item.img1} alt="" /> */}
+                <InfoSliderProducts value={"buttonPizza"} onClick={() => handleClick(item.name)}/>
               </div>
-            </button>
+            {/* // </button> */}
+            </>
           ))}
         </div>
       </section>
