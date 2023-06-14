@@ -41,8 +41,6 @@ const InfoSliderProducts = () => {
         Swal.fire("God Jobs", "Desea seguir con la compra", "success").then(() => {
           navigate("/products");
         });
-       
-
       }
     
     return (
