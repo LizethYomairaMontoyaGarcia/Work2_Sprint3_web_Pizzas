@@ -3,6 +3,7 @@ import { getPizzas } from '../../../services/getPizzas';
 import imgSearch from "../../../assets/search.svg";
 import { PizzaContext } from '../../../useContex/PizzaContext';
 import "./styleButtonsSearchs.scss"
+import InfoSliderProducts from '../../../sliderProducts/InfoSliderProducts'
 
 const ButtonSearchProducts = () => {
   
@@ -38,12 +39,12 @@ const ButtonSearchProducts = () => {
 
   return (
     <>
-      <h1>Buscar productos</h1>
       <section className='section__search-pizzas'>
         <div className='section__search'>
           <input
             type="text"
             className='section__search-input'
+            placeholder='Pizza de peperoni, mexicana, hawaiana, de pollo'
             value={buscarTermino}
             onChange={(e) => setBuscarTermino(e.target.value)}
           />
@@ -51,7 +52,9 @@ const ButtonSearchProducts = () => {
         </div>
 
         <div className="section__scrollPizzas">
+        
           {filteredPizzas.map((item, index) => (
+       
             <button
               key={index}
               value={"buttonPizza"}
@@ -60,9 +63,11 @@ const ButtonSearchProducts = () => {
             >
               <h3>{item.name}</h3>
               <div id="contenedorImagenes">
-                <img src={item.img} alt="" />
+                {/* <img src={item.img1} alt="" /> */}
+                <InfoSliderProducts value={"buttonPizza"} />
               </div>
-            </button>
+             </button>
+           
           ))}
         </div>
       </section>

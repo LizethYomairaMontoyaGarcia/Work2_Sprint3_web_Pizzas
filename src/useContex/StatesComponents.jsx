@@ -27,15 +27,14 @@ const StatesComponents = ({ children }) => {
   //Para redirigir los botones del home
   const toHome = () => {
     console.log("Hice click en home");
-    navigate("/homeInfo");
-  }
-
-  const toFilter = () => {
-    console.log("Hice click en buscar");
-    navigate("/filter");
-  }
-  ///////////////////////
-
+    navigate("/homeInfo");}
+  
+    const toFilter = () => {
+      console.log("Hice click en buscar");
+      navigate("/infoProducts");
+    }
+    ///////////////////////
+  
   const types = {
     increment: 'increment',
     decrement: 'decrement',
